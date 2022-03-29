@@ -1,0 +1,8 @@
+<div class="column column-1">
+    <button class="btn" (click)="newGame()">Play Again</button>
+</div>
+<div class="column column-2">
+    <app-chip *ngFor="let option of options; let i = index;" [iconName]="option.iconName" [className]="option.className" [iconTitle]="option.name" (click)="playGame(i)"></app-chip>
+</div>
+<app-winner-card [winner]="winner" [options]="finale" [@openClose]="isOpen ? 'open' : 'close'"></app-winner-card>
+
